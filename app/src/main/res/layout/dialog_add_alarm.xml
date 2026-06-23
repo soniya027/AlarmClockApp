@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TimePicker android:id="@+id/timePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Alarm label (optional)"
+        android:layout_marginTop="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alarm tone"
+        android:textSize="12sp"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="6dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgTones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton android:id="@+id/rbChime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gentle chime"
+            android:tag="chime"
+            android:checked="true"/>
+
+        <RadioButton android:id="@+id/rbBeep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Classic beep"
+            android:tag="beep"/>
+
+        <RadioButton android:id="@+id/rbPulse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Digital pulse"
+            android:tag="pulse"/>
+
+        <RadioButton android:id="@+id/rbBell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Morning bell"
+            android:tag="bell"/>
+
+    </RadioGroup>
+
+</LinearLayout>
